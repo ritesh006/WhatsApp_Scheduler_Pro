@@ -1,0 +1,7 @@
+{
+    "C_Cpp.default.compilerPath": "C:\\mingw64\\bin\\gcc.exe",
+    "files.associations": {
+        "image_reader.h": "c",
+        "string.h": "c"
+    }
+}
