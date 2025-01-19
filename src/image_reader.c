@@ -1,50 +1,14 @@
-#include <stdio.h>
-#include <stdlib.h>
-
 #include "image_reader.h"
 
-
-// Define error codes
-typedef enum {
-    FILE_SUCCESS = 0,
-    FILE_OPEN_ERROR = -1,
-    FILE_SEEK_ERROR = -2,
-    FILE_READ_ERROR = -3,
-    FILE_SIZE_ERROR = -4,
-    FILE_CLOSE_ERROR = -5,
-    FILE_START_POSE_ERROR = -6
-
-} FileError;
-
-typedef struct {
-    int code;
-    long file_Size;
-    char* message;
-    int signature[4];
-    char file_Name[200];
-    
-} FileStatus;
-
-void read_file(FileStatus *status);
-void error_handle(FileStatus *status);
-void get_file_size(FileStatus *status);
-void check_image_type(FileStatus *status);
-// void file_close(FILE *);
-// {
-//  if (fclose(image_file) != 0) {
-//         status->code = FILE_CLOSE_ERROR;
-//         status->message = "Error closing file";
-//     }
-// }
 
 int main() 
 {
     FileStatus status = {0, 0, "NO_PATH_STORED", 0, 0,0,0, "NO_INPUT_STORED"}; /* Structure Initialization */
+    userTime time = {0, 0, 0,"AM"}; /* Structure Initialization */
 
-    printf("Enter Your file Name: ");
-    scanf("%199s",status.file_Name); 
+    menu_file_input(&status);
 
-    printf("%s\n",status.file_Name);/* Debug print */ 
+    menu_time_input(&time);
 
     read_file(&status);
 
@@ -63,23 +27,30 @@ int main()
     {
         check_image_type(&status);
     }
-    
-    else{
-        if (status.code != FILE_SUCCESS)
+
+    while(1) 
+    {  
+        uint8_t time_match = check_time(&time);
+        
+        if(time_match == TIME_SUCCESS)
         {
-            error_handle(&status);
+            printf(CYAN"TIME MATCH..."RESET);
         }
+        else if(time_match = TIME_ERROR)
+        {
+            printf(CYAN"TIME NOT MATCHING..."RESET);
+        }
+        
+        sleep_seconds(60);  // Wait for 60 seconds before next check
     }
-    // file_close(FILE *image_file, status);
+
+    
+
+   
+
     return 0;
 }
-// void file_close(FILE *image_file, FileStatus *status)
-// {
-//  if (fclose(image_file) != 0) {
-//         status->code = FILE_CLOSE_ERROR;
-//         status->message = "Error closing file";
-//     }
-// }
+
 void error_handle(FileStatus *status)
 {
     switch (status->code)

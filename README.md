@@ -3,7 +3,6 @@
 ## Overview
 WhatsApp Scheduler Pro is a powerful C-based application that enables users to schedule and automatically send image files with custom messages to WhatsApp contacts at predefined dates and times.
 
-
 ## Key Features
 - 🕒 Precise Time-Based Scheduling
 - 🖼️ Image File Sharing

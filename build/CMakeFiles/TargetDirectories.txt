@@ -1,0 +1,9 @@
+C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build/CMakeFiles/image_reader.dir
+C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build/CMakeFiles/edit_cache.dir
+C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build/CMakeFiles/rebuild_cache.dir
+C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build/src/check_time/CMakeFiles/check_time.dir
+C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build/src/check_time/CMakeFiles/edit_cache.dir
+C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build/src/check_time/CMakeFiles/rebuild_cache.dir
+C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build/src/menu/CMakeFiles/menu.dir
+C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build/src/menu/CMakeFiles/edit_cache.dir
+C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build/src/menu/CMakeFiles/rebuild_cache.dir

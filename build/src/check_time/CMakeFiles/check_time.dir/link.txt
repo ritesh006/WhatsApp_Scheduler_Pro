@@ -1,0 +1,2 @@
+C:/mingw64/bin/ar.exe qc libcheck_time.a CMakeFiles/check_time.dir/check_time.c.obj
+C:/mingw64/bin/ranlib.exe libcheck_time.a
