@@ -45,7 +45,7 @@ typedef struct {
     char* message;
     int signature[4];
     char file_Name[200];
-    
+    char type[20];
 } FileStatus;
 
 typedef struct {
@@ -55,6 +55,11 @@ typedef struct {
     char period[3];
 } userTime;
 
+typedef struct {
+    char phone_number[20];
+    char country_code[5];
+} WhatsappContact;
+
 void menu_file_input(FileStatus *status);
 void menu_time_input(userTime *status);
 void read_file(FileStatus *status);
@@ -62,10 +67,14 @@ void error_handle(FileStatus *status);
 void get_file_size(FileStatus *status);
 void convertToUpper(char *str);
 void sleep_seconds(int seconds);
+userTime check_current_time(userTime *inputTime);
+userTime convert12To24(userTime *inputTime);
 void check_image_type(FileStatus *status);
 void check_scanf_error_str(char *field, const char *prompt);
 void check_scanf_error_int(int *field, const char *prompt);
 uint8_t check_time(userTime *userTime);
+int is_time_valid(userTime *twenty_4_hour_format);
+int validate_contact(const char* number, const char* country);
 
 
 #endif

@@ -7,3 +7,6 @@ C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost
 C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build/src/menu/CMakeFiles/menu.dir
 C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build/src/menu/CMakeFiles/edit_cache.dir
 C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build/src/menu/CMakeFiles/rebuild_cache.dir
+C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build/src/validate_contact/CMakeFiles/contact.dir
+C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build/src/validate_contact/CMakeFiles/edit_cache.dir
+C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build/src/validate_contact/CMakeFiles/rebuild_cache.dir

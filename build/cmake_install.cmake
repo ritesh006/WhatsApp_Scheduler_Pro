@@ -41,6 +41,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build/src/check_time/cmake_install.cmake")
   include("C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build/src/menu/cmake_install.cmake")
+  include("C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build/src/validate_contact/cmake_install.cmake")
 
 endif()
 

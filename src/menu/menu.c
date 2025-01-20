@@ -12,17 +12,28 @@ void menu_file_input(FileStatus *status) {
 }
 
 void menu_time_input(userTime *inputTime) {
-    printf("   Enter Hour: ");
-    check_scanf_error_int(&inputTime->hour, "Invalid input! Please enter a valid numerical value for the Hour (0-12).");
+    int result = 0;
 
-    printf(" Enter Minute: ");
-    check_scanf_error_int(&inputTime->min, "Invalid input! Please enter a valid numerical value for the Minute (0-59).");
-
-    printf("Enter Seconds: ");
-    check_scanf_error_int(&inputTime->seconds, "Invalid input! Please enter a valid numerical value for the Seconds (0-59).");
-
-    printf("Enter Period(AM, PM): ");
-    check_scanf_error_str(inputTime->period, "Invalid input! Please enter a valid Period (AM/PM).");
+    do
+    {
+        printf("   Enter Hour: ");
+        check_scanf_error_int(&inputTime->hour, "Invalid input! Please enter a valid numerical value for the Hour (0-12).");
+        
+        printf("Enter Minutes: ");
+        check_scanf_error_int(&inputTime->min, "Invalid input! Please enter a valid numerical value for Minutes (0-59).");
+        
+        printf("   Enter Period (AM/PM): ");
+        scanf("%s", inputTime->period);
+        
+        // Convert to 24-hour format before validation
+        userTime twenty_4_hour_format = convert12To24(inputTime);
+        
+        result = is_time_valid(&twenty_4_hour_format);
+        
+        if (result == -1) {
+            printf("Please enter a future time\n");
+        }
+    } while (result == -1);
 
     printf("Input time: %02d:%02d:%02d %s\n", inputTime->hour, inputTime->min, inputTime->seconds, inputTime->period);   
 }

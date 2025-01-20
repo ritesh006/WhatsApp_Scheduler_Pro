@@ -1,1 +1,1 @@
- src/check_time/libcheck_time.a src/menu/libmenu.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
+ src/check_time/libcheck_time.a src/menu/libmenu.a src/validate_contact/libcontact.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

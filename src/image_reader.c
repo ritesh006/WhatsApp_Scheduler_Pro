@@ -35,6 +35,7 @@ int main()
         if(time_match == TIME_SUCCESS)
         {
             printf(CYAN"TIME MATCH..."RESET);
+            break;
         }
         else if(time_match = TIME_ERROR)
         {
@@ -142,7 +143,8 @@ void check_image_type(FileStatus *status) {
         status->message = "Cannot open file";
         return;
     }
-
+WhatsappContact contact; 
+int test = validate_contact(contact.phone_number, contact.country_code);
     // Reset file pointer to beginning
     rewind(image_file);
 
@@ -165,37 +167,35 @@ void check_image_type(FileStatus *status) {
     printf("\n");
 
     // Signature checking
-    // PNG Signature
     unsigned char png_signature[] = {0x89, 0x50, 0x4E, 0x47};
-    
-    // JPEG Signature
     unsigned char jpeg_signature[] = {0xFF, 0xD8, 0xFF};
-    
-    // GIF Signature
     unsigned char gif_signature[] = {0x47, 0x49, 0x46, 0x38};
-    
-    // BMP Signature
     unsigned char bmp_signature[] = {0x42, 0x4D};
 
-    // Determine file type
+    // Store type in struct instead of printing directly
     if (memcmp(signature, png_signature, 4) == 0) {
-        printf(GREEN "File Type: PNG Image\n" RESET);
+        strncpy(status->type, "PNG Image", sizeof(status->type) - 1);
     } 
     else if (memcmp(signature, jpeg_signature, 3) == 0) {
-        printf(GREEN "File Type: JPEG Image\n" RESET);
+        strncpy(status->type, "JPEG Image", sizeof(status->type) - 1);
     }
     else if (memcmp(signature, gif_signature, 4) == 0) {
-        printf(GREEN "File Type: GIF Image\n" RESET);
+        strncpy(status->type, "GIF Image", sizeof(status->type) - 1);
     }
     else if (memcmp(signature, bmp_signature, 2) == 0) {
-        printf(GREEN "File Type: BMP Image\n" RESET);
+        strncpy(status->type, "BMP Image", sizeof(status->type) - 1);
     }
     else {
-        printf(YELLOW "Unknown File Type\n" RESET);
+        strncpy(status->type, "Unknown File Type", sizeof(status->type) - 1);
     }
+    
+    // Ensure null termination
+    status->type[sizeof(status->type) - 1] = '\0';
 
     // Copy first 4 bytes to signature in struct
     memcpy(status->signature, signature, 4);
+
+    printf(GREEN "File Type: %s\n" RESET, status->type);
 
     fclose(image_file);
 }

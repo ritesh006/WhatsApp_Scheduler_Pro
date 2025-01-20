@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build/CMakeFiles C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build && $(CMAKE_COMMAND) -E cmake_progress_start C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build/CMakeFiles C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build/src/validate_contact//CMakeFiles/progress.marks
+	cd C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/validate_contact/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/validate_contact/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,94 +103,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/validate_contact/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/validate_contact/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named image_reader
+# Convenience name for target.
+src/validate_contact/CMakeFiles/contact.dir/rule:
+	cd C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/validate_contact/CMakeFiles/contact.dir/rule
+.PHONY : src/validate_contact/CMakeFiles/contact.dir/rule
 
-# Build rule for target.
-image_reader: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 image_reader
-.PHONY : image_reader
-
-# fast build rule for target.
-image_reader/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_reader.dir/build.make CMakeFiles/image_reader.dir/build
-.PHONY : image_reader/fast
-
-#=============================================================================
-# Target rules for targets named check_time
-
-# Build rule for target.
-check_time: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 check_time
-.PHONY : check_time
-
-# fast build rule for target.
-check_time/fast:
-	$(MAKE) $(MAKESILENT) -f src/check_time/CMakeFiles/check_time.dir/build.make src/check_time/CMakeFiles/check_time.dir/build
-.PHONY : check_time/fast
-
-#=============================================================================
-# Target rules for targets named menu
-
-# Build rule for target.
-menu: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 menu
-.PHONY : menu
-
-# fast build rule for target.
-menu/fast:
-	$(MAKE) $(MAKESILENT) -f src/menu/CMakeFiles/menu.dir/build.make src/menu/CMakeFiles/menu.dir/build
-.PHONY : menu/fast
-
-#=============================================================================
-# Target rules for targets named contact
-
-# Build rule for target.
-contact: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contact
+# Convenience name for target.
+contact: src/validate_contact/CMakeFiles/contact.dir/rule
 .PHONY : contact
 
 # fast build rule for target.
 contact/fast:
-	$(MAKE) $(MAKESILENT) -f src/validate_contact/CMakeFiles/contact.dir/build.make src/validate_contact/CMakeFiles/contact.dir/build
+	cd C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build && $(MAKE) $(MAKESILENT) -f src/validate_contact/CMakeFiles/contact.dir/build.make src/validate_contact/CMakeFiles/contact.dir/build
 .PHONY : contact/fast
 
-src/image_reader.obj: src/image_reader.c.obj
-.PHONY : src/image_reader.obj
+validate_contact.obj: validate_contact.c.obj
+.PHONY : validate_contact.obj
 
 # target to build an object file
-src/image_reader.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_reader.dir/build.make CMakeFiles/image_reader.dir/src/image_reader.c.obj
-.PHONY : src/image_reader.c.obj
+validate_contact.c.obj:
+	cd C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build && $(MAKE) $(MAKESILENT) -f src/validate_contact/CMakeFiles/contact.dir/build.make src/validate_contact/CMakeFiles/contact.dir/validate_contact.c.obj
+.PHONY : validate_contact.c.obj
 
-src/image_reader.i: src/image_reader.c.i
-.PHONY : src/image_reader.i
+validate_contact.i: validate_contact.c.i
+.PHONY : validate_contact.i
 
 # target to preprocess a source file
-src/image_reader.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_reader.dir/build.make CMakeFiles/image_reader.dir/src/image_reader.c.i
-.PHONY : src/image_reader.c.i
+validate_contact.c.i:
+	cd C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build && $(MAKE) $(MAKESILENT) -f src/validate_contact/CMakeFiles/contact.dir/build.make src/validate_contact/CMakeFiles/contact.dir/validate_contact.c.i
+.PHONY : validate_contact.c.i
 
-src/image_reader.s: src/image_reader.c.s
-.PHONY : src/image_reader.s
+validate_contact.s: validate_contact.c.s
+.PHONY : validate_contact.s
 
 # target to generate assembly for a file
-src/image_reader.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_reader.dir/build.make CMakeFiles/image_reader.dir/src/image_reader.c.s
-.PHONY : src/image_reader.c.s
+validate_contact.c.s:
+	cd C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build && $(MAKE) $(MAKESILENT) -f src/validate_contact/CMakeFiles/contact.dir/build.make src/validate_contact/CMakeFiles/contact.dir/validate_contact.c.s
+.PHONY : validate_contact.c.s
 
 # Help Target
 help:
@@ -200,13 +162,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... check_time"
 	@echo "... contact"
-	@echo "... image_reader"
-	@echo "... menu"
-	@echo "... src/image_reader.obj"
-	@echo "... src/image_reader.i"
-	@echo "... src/image_reader.s"
+	@echo "... validate_contact.obj"
+	@echo "... validate_contact.i"
+	@echo "... validate_contact.s"
 .PHONY : help
 
 
@@ -218,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

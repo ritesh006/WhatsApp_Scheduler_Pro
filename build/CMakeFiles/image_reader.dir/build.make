@@ -95,6 +95,7 @@ image_reader.exe: CMakeFiles/image_reader.dir/src/image_reader.c.obj
 image_reader.exe: CMakeFiles/image_reader.dir/build.make
 image_reader.exe: src/check_time/libcheck_time.a
 image_reader.exe: src/menu/libmenu.a
+image_reader.exe: src/validate_contact/libcontact.a
 image_reader.exe: CMakeFiles/image_reader.dir/linkLibs.rsp
 image_reader.exe: CMakeFiles/image_reader.dir/objects1.rsp
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:/Users/USER/Desktop/my_Space/my_Project/image_Processing/using_C/WhatsAutoPost/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable image_reader.exe"

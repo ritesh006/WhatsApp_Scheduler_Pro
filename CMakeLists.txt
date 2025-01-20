@@ -11,6 +11,7 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 # Add subdirectories
 add_subdirectory(src/check_time)
 add_subdirectory(src/menu)
+add_subdirectory(src/validate_contact)
 
 # Add executable
 add_executable(image_reader 
@@ -21,4 +22,5 @@ add_executable(image_reader
 target_link_libraries(image_reader 
     check_time
     menu
+    contact
 )
